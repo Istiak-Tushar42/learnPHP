@@ -6,10 +6,10 @@
   $blooenType = true;
   // $arrayType = ["HTML", "CSS", "JAVASCRIPT", "PHP"];
   $arrayType = array("HTML", "CSS", "JAVASCRIPT", "PHP");
-// $objectType = new MyClass();
-$nullType = null;
+  // $objectType = new MyClass();
+  $nullType = null;
 
-// - OUTPUT
+  // - OUTPUT
   echo $name . "<br>";
   echo $numeric . "<br>";
   echo $floatNumber . "<br>";
