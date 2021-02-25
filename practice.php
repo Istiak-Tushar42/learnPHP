@@ -103,5 +103,143 @@
 
   echo $name === 'Tushar' ? 'Correct<br>' : 'Incorrect<br>';
 
+  // Loops
+
+  $a = 1;
+
+  while($a <= 10) {
+    echo $a."<br>";
+    $a++;
+  }
+
+  $a = 10;
+
+  do {
+    echo $a."<br>";
+    $a--;
+  } while($a >= 1);
+
+  for($i = 1; $i <= 20; $i++) {
+    if($i === 3) {
+    // echo "Number 3 : $i<br>";
+      // continue;
+      // break;
+      goto abc;
+    }
+      echo $i."<br>";
+  }
+
+  abc:
+  echo "goto from here<br>";
+
+  for($i = 1; $i <= 100; $i += 10) {
+    for($j = $i; $j < $i + 10; $j++) {
+      echo $j." ";
+    }
+    echo "<br>";
+  }
+
+  function myFunc() {
+    echo "Hello I am a Function<br>";
+  }
+
+  myFunc();
+
+  // Function with Parameter
+  function withParam($p1, $p2) {
+    return $p1 + $p2;
+  }
+
+  $sumFunc = withParam(5, 10);
+
+  echo $sumFunc."<br>";
+
+  function withPar($p1, $p2) {
+    return $p1 + $p2;
+  }
+
+  $sumFunc = "withParam";
+
+  echo $sumFunc(10, 20)."<br>";
+
+  // Function with Reference Parameter
+  function refParam(&$para) {
+    $para = 'I am Ratul';
+    echo "$para and I am good<br>";
+  }
+  $para = 'I am Tushar';
+  refParam($para);
+
+  $global = "I am Global Variable<br>";
+
+  function local() {
+    global $global;
+
+    $local = 'I am Local variable<br>';
+    global $local;
+    echo $local;
+    echo $global;
+  }
+
+  local();
+
+  // print_r($GLOBALS);
+
+  // Recursion
+  function display($n) {
+    if($n <= 5) {
+      echo "$n <br>";
+      display($n+1);
+    }
+  }
+
+  display(1);
+
+  function factorial($num) {
+    if($num == 0) {
+      return 1;
+    } else {
+      return ($num * factorial($num - 1));
+    }
+  }
+
+  echo factorial(5);
+
+  # ARRAYS
+
+  # indexedArray
+  $num = array(1, 2, 3, 4, 5);
+  $num2 = [1, 2, 3, 4, 5, 6, 7];
+
+  echo "<br>";
+  echo $num2[5]."<br>";
   
+  # AssociativeArray
+   $associative = [
+     'Tushar' => 1,
+     'Nishi' => 2,
+     'Ratul' => 3,
+     'Binay' => 4,
+   ];
+
+   echo $associative["Tushar"]."<br>";
+   echo $associative["Nishi"]."<br>";
+   echo $associative["Ratul"]."<br>";
+   echo $associative["Binay"]."<br>";
+
+   # ForEach Loops
+   forEach($associative as $key => $value) {
+     echo "$key = $value <br>";
+   };
+
+   $asso = [
+     10 => 'AUDI',
+     2 => 'BMW',
+     30 => 'FARRERY',
+     400 => 'CHEVRON',
+   ];
+
+   forEach($asso as $key => $value) {
+     echo "$key = $value <br>";
+   };
 ?>
