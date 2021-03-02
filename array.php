@@ -364,8 +364,137 @@
     #ARRAY_UDIFF_UASSOC Function
     $arrayDiff = array_udiff_uassoc($a1, $a2, "compare", "compVal");
 
+    $persons = array(
+      array(
+        "id"=> 1,
+        "firstName" => "Istiak",
+        "lastName" => "Tushar",
+        "age"=> 28
+      ),
+      array(
+        "id"=> 2,
+        "firstName" => "Ramnabaiyat",
+        "lastName" => "Nishi",
+        "age"=> 18
+      ),
+      array(
+        "id"=> 3,
+        "firstName" => "Abdullah",
+        "lastName" => "Al Mamun",
+        "age"=> 29
+      ),
+      array(
+        "id"=> 4,
+        "firstName" => "Mahadi",
+        "lastName" => "Hasan",
+        "age"=> 25
+      ),
+    );
+
+    $clor = array("a" => "Red", "b"=> "Green", "c" => "Blue", "d" => "Red");
+
+    # ARRAY_VALUES Function
+    $arrVals = array_values($clor);
+
+    # ARRAY_UNIQUE Function
+    $arrUnique = array_unique($clor);
+
+    # ARRAY_COLUMN Function
+    // $arrayColumn = array_column($persons, "firstName");
+    $arrayColumn = array_column($persons, "firstName", "id");
+
+    $cars = ["BMW", "CHEVY", "FERRARY", "MARUTI", "TOYOTA", "VOLVO", "MARCEDES", "HONDA", "OPEL"];
+    $cars2 = ["a" => "BMW", "b" => "CHEVY", "c" => "FERRARY", "d" => "MARUTI", "e" => "TOYOTA", "f" => "VOLVO", "g" => "MARCEDES", "h" => "HONDA", "i" => "OPEL"];
+
+    # ARRAY_CHUNK Function
+    // $arrayChunk = array_chunk($cars, 2);
+    $arrayChunk = array_chunk($cars2, 2, true);
+
+    $rollNo = array("Istiak" => 1, "Tushar" => 2, "Nishi" => 3, "Ratul" => 4, "Binay" => 5);
+
+    # ARRAY_FLIP Function
+    $arrayFlip = array_flip($rollNo);
+
+    # ARRAY_CHANGE_KEY_CASE Function - BY DEFAULT LOWERCASE
+    $chgngeKeyCase = array_change_key_case($rollNo, CASE_UPPER);
+
+    $sumVar = [10, 20, 30, 40, 50, 60, 70, 80, 90, 100];
+    $arrProd = [1, 2, 3, 4, 5];
+
+    # ARRAY_SUM Function
+    $arraySum = array_sum($sumVar);
+
+    # ARRAY_PRODUCT Function
+    $arrayProduct = array_product($arrProd);
+
+    $colVal = ["Red", "Green", "Blue", "Orange", "Yellow", "Purple", "Pink", "Aqua"];
+
+    # ARRAY_RAND(RANDOM) Function
+    $arrayRand = array_rand($colVal, 2);
+
+    # SHUFFLE Function
+    shuffle($colVal);
+
+    $arrFill = ["a", "b", "c", "d", "e"];
+
+    # ARRAY_FILL_KEYS Function - Convert to AssociativeArray
+    $arrFillKeys = array_fill_keys($arrFill, "Testing");
+
+    # ARRAY_FILL Function
+    $arrayFill = array_fill(0, 6, "Test");
+
+    $arrwlk = array(
+      "Tushar" => 10,
+      "Nishi" => 20,
+      "Mahadi" => 30
+    );
+
+    # ARRAY_WALK Function
+    array_walk($arrwlk, "myFunc", "is a key of");
+
+    function myFunc($value, $key, $param) {
+      echo "$key $param $value <br>";
+    }
+
+    $mdaa = array(
+      "Tushar" => array(
+        "id" => 1,
+        "age" => 28,
+        "phone" => "+8801615922742",
+        "mail" => "istiak.tushar.it@gmail.com"
+      ),
+      "Nishi" => 20,
+      "Toshlu" => 30
+    );
+
+    # ARRAY_WALK_RECURSIVE Function
+    array_walk_recursive($mdaa, "myFunc", "is a key of");
+
+    $num = [1, 2, 3, 4, 5];
+    $ffod = ["Apple", "Orange", "Pineapple", "Lemon", "Guava"];
+
+    # ARRAY_MAP Function
+    // $arrayMap = array_map("square", $num, $ffod);
+    $arrayMap = array_map(null, $num, $ffod);
+
+    function square($n, $m) {
+      // return "$n = $m";
+      return [$n => $m];
+    }
+
+    $red = array('Orange', 'Banana', 'Pineapple');
+
+    # ARRAY_REDUCE Function
+    $arrayReduce = array_reduce($red, "funcReduce");
+
+    function funcReduce($n, $m) {
+      return $n . "-" . $m;
+    }
+
     echo "<pre>";
-      print_r($arrayDiff);
+      print_r($arrayReduce);
     echo "</pre>";
     echo "<br>";
+    // echo $colVal[$arrayRand[0]] . "<br>";
+    // echo $colVal[$arrayRand[1]];
 ?>
