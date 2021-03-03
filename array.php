@@ -491,8 +491,137 @@
       return $n . "-" . $m;
     }
 
+    $arrSort = ["Istiak", "Hossain", "Tushar", "Ramnabaiyat", "Jahan", "Nishi"];
+    $aSort = array(
+      "a" => "Apple",
+      "e" => "Banana",
+      "c" => "Orange",
+      "d" => "Lemon",
+      "b" => "Pineapple"
+    );
+
+    # ARRAY_SORTING Function
+
+    # SORT
+    // sort($aSort);
+
+    # REVERSE SORT
+    // rsort($aSort);
+
+    # ASSOCIATIVE ORDER SORT
+    // asort($aSort);
+
+    # ASSOCIATIVE REVERSE ORDER SORT
+    // arsort($aSort);
+
+    # ASSOCIATIVE KEY ORDER SORT
+    // ksort($aSort);
+
+    # ASSOCIATIVE KEY REVERSE ORDER SORT
+    krsort($aSort);
+
+    $nSort = array("img7.png", "img4.png", "img6.png", "img2.png", "img5.png", "img1.png", "img3.png");
+
+    # NATURAL ORDER SORT
+    natsort($nSort);
+    natcasesort($nSort);
+
+    $f = ["Apple", "Banana"];
+    $v = ["Lemon", "Cabbage"];
+
+    # MULTI ARRAY SORTING BUT VALUE MUST HAVE SAME LENGTH INSIDE EVERY ARRAY
+    array_multisort($f, $v);
+
+    $rSort = [1, 2, 3, 4, 5];
+
+    # REVERSE SORT
+    $revSort = array_reverse($rSort);
+
     echo "<pre>";
-      print_r($arrayReduce);
+      print_r($revSort);
+    echo "</pre>";
+    echo "<br>";
+
+    $arrTrav = ["orange", "banana", "apple", "pineapple"];
+
+    # ARRAY TRAVERSING FUNCTION
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+    echo "<b>Key: </b>" . key($arrTrav) . "<br>";
+    echo "<b>Pos: </b>" . pos($arrTrav) . "<br>";
+
+    # POINT TO NEXT VALUE
+    next($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+
+    # POINT TO NEXT VALUE
+    next($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+
+    # POINT TO PREVIOUS VALUE
+    prev($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+
+    # POINT TO PREVIOUS VALUE
+    prev($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+
+    # POINT TO END VALUE / MOVE TO END VALUE
+    end($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+    echo "<b>Key: </b>" . key($arrTrav) . "<br>";
+
+    # POINT TO END VALUE / MOVE TO END VALUE
+    reset($arrTrav);
+    echo "<b>Current: </b>" . current($arrTrav) . "<br>";
+    echo "<b>Key: </b>" . key($arrTrav) . "<br>";
+
+    // $eachTrav = each($arrTrav); // PROBLEM
+
+    # ARRAY LIST FUNCTION
+    $c7 = array('red', 'green', 'blue');
+
+    list($a, $b, $c) = $c7;
+
+    echo "Value of a : $a <br>";
+    echo "Value of b : $b <br>";
+    echo "Value of c : $c <br>";
+
+    # ARRAY EXTRACT FUNCTION
+    $a = 'golden';
+    $aex = array('a' => 'purple', 'b' => 'lime', 'c' => 'aqua');
+
+    // extract($aex);
+    extract($aex, EXTR_PREFIX_SAME, "test");
+
+    echo "Value of a : $a <br>";
+    echo "Value of a : $test_a <br>";
+    echo "Value of b : $b <br>";
+    echo "Value of c : $c <br>";
+
+    # ARRAY COMPACT FUNCTION
+    $fn = "Istiak";
+    $ls = "Tushar";
+    $ag = 28;
+    $gender = "Male";
+    $country = "Bangladesh";
+
+    $extra = ["gender", "country"];
+
+    $arrCompact = compact("fn", "ls", "ag", $extra);
+
+    # ARRAY RANGE FUNCTION
+
+    // $arrRange = range(1, 10);
+    // $arrRange = range(0, 100, 10);
+    $arrRange = range('a', 'h');
+
+    foreach(range('a', 'h') as $value) {
+      echo $value . "<br>";
+    }
+
+
+    echo "<pre>";
+      print_r($arrRange);
     echo "</pre>";
     echo "<br>";
     // echo $colVal[$arrayRand[0]] . "<br>";
