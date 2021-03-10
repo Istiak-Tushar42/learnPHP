@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap');
 
 :root {
-  --primary-color: #333;
+  --primary-color: #ee113c;
   --secondary-color: #8993be;
   --primary-font: 'Nunito', sans-serif;
 }
@@ -16,7 +16,7 @@
 
 
 body {
-  color: var(--primary-color);
+  color: #333;
   font-family: var(--primary-font);
   font-size: 1rem;
   font-weight: 400;
@@ -24,6 +24,10 @@ body {
   margin: 0;
   overflow-x: hidden;
   background: var(--secondary-color);
+}
+
+.bg-white {
+  background: white;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -86,6 +90,75 @@ h1, h2, h3, h4, h5, h6 {
 
 .main-content p {
   margin-bottom: 1rem;
+}
+
+.contact {
+  padding: 2rem;
+}
+
+.contact h1 {
+  margin-bottom: 1rem;
+}
+.contact fieldset {
+  border-color: #ee113c;
+  padding: 1.5rem 1rem;
+  width: 70%;
+}
+
+.contact legend {
+  background: #ee113c;
+  padding: .5rem;
+  font-size: .9rem;
+  color: white;
+  font-weight: bold;
+  border-radius: 2px;
+}
+
+.contact .form-field label {
+  display: inline-block;
+  font-size: 1rem;
+  position: relative;
+  margin-bottom: .25rem;
+}
+
+.contact .form-field label::after {
+  position: absolute;
+  top: 0;
+  right: -.75rem;
+  content: '*';
+  color: #ee113c;
+  font-size: 1.25rem;
+}
+
+.contact .form-field .input-field {
+  margin-bottom: 1rem;
+  width: 100%;
+  padding: .4rem 1rem;
+  outline: none;
+  border: solid 1px var(--secondary-color);
+  transition: all .5s ease-in-out;
+}
+
+.contact .form-field .input-field:focus {
+  border-color: #ee113c;
+  outline: none;
+  box-shadow: none;
+}
+
+.contact .submit-field {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.contact .submit-field .submit-btn {
+  background: #ee113c;
+  border: none;
+  outline: none;
+  padding: .5rem 1.25rem;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
 }
 
 .sidebar {

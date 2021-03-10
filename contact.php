@@ -19,7 +19,7 @@
             <!-- MAIN SECTION START -->
             <main class="main">
                 <!-- PHP INCLUDE FUNCTION -->
-                <?php include 'main-sec.php'; ?>
+                <?php include 'form.php'; ?>
 
                 <!-- PHP INCLUDE FUNCTION -->
                 <?php include 'sidebar.php'; ?>
