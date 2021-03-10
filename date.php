@@ -1,5 +1,5 @@
 <?php
-  # PHP Date Function
+  # PHP Date Function => CURRENT DATE AND TIME
 
   # DATE FUNCTION FOR GET DAY
   echo "Today is " . date("d") . "<br>"; // USE FOR GET DAY WITH => 0
@@ -25,8 +25,35 @@
   echo "Week day is " . date("N") . "<br>"; // USE FOR GET NUMERIC VALUE OF WEEK => Start From 1
   echo "Week day is " . date("w") . "<br>"; // USE FOR GET NUMERIC VALUE OF WEEK => Start from 0
 
-
+  # DATE FUNCTION FOR YEAR
   echo "Day of the year is " . date("z") . "<br>"; // USE FOR GET WHICH DAY FROM YEAR
   echo "Week of the year is " . date("W") . "<br>"; // USE FOR GET WHICH WEEK FROM YEAR
   echo "Days of month is " . date("t") . "<br>"; // USE FOR GET TOTAL DAYS OF THE MONTHS
   echo "Is this is leapyear " . date("L") . "<br>"; // USE FOR GET LEAPYEAR OR NOT!
+
+  # SET TIMEZONE FOR GET PERFECT REGION
+  date_default_timezone_set("Asia/Dhaka");
+
+  # TIME FUNCTION TO GET HOUR
+  echo "Hour is " . date("h") . "<br>";
+  echo "Hour is " . date("H") . "<br>";
+  echo "Hour is " . date("g") . "<br>";
+  echo "Hour is " . date("G") . "<br>";
+
+  # TIME FUNCTION TO GET MINUTES
+  echo "Minutes is " . date("i") . "<br>";
+
+  # TIME FUNCTION TO GET SECONDS
+  echo "Seconds is " . date("s") . "<br>";
+
+  # TIME FUNCTION TO GET MERIDIEM
+  echo "Meridiem is " . date("a") . "<br>"; // GET am SMALL
+  echo "Meridiem is " . date("A") . "<br>"; // GET AM CAPITAL
+
+  # GET FULL TIME FORMAT
+  echo "Time is " . date("h:i:s a e") . "<br>";
+
+  # GET FULL TIME AND DATE FORMAT
+  echo "Date and Time is " . date("d/m/Y h:i:s a") . "<br>";
+
+  ?>
